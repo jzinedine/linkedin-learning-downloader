@@ -124,7 +124,7 @@ class Lld:
         for course in config.COURSES:
             time.sleep(1)
             resp = self.session.get(course_api_url % course)
-			course_data = resp.json()['elements'][0]
+	    course_data = resp.json()['elements'][0]
             course_name = self.format_string(course_data['title'])
             logging.info('Starting download of course [%s]...' % course_name)
             course_path = '%s/%s' % (self.base_path, course_name)
